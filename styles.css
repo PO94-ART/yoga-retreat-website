@@ -1,0 +1,320 @@
+/* ================================================
+   YOGA RETREAT WEBSITE - STYLESHEET
+   Simple and beginner-friendly CSS
+   ================================================ */
+
+/* Reset and Base Styles */
+@font-face{
+    font-family:'BricolageGrotesque';
+    src: url(./font/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BricolageGrotesque';
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f7f4;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #9d9577;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #e8dcc8;
+  border-bottom: 2px solid #e8dcc8;
+  padding-bottom: 5px;
+}
+
+/* Main Content Area */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section (Banner) */
+.hero {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sections */
+section {
+  margin: 50px 0;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 42px;
+  color: #8b9c5f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  color: #8b9c5f;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #a9a688;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Lists */
+li {
+ 
+  font-size: 16px;
+  color: #555;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #f9f7f4;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #8b9c5f;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #d4c4b0;
+  border-radius: 4px;
+  font-family: 'BricolageGrotesque';
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #8b9c5f;
+  background-color: #fdfcfa;
+}
+
+textarea {
+  min-height: 150px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 30px;
+  background-color: #9d9577;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #7a8a52;
+}
+
+/* Footer */
+footer {
+  background-color: #9d9577;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  color: white;
+  margin: 5px 0;
+}
+
+footer a {
+  color: #e8dcc8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Tablets and Phones */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .hero {
+    height: 250px;
+  }
+
+  section {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design for Small Phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .hero {
+    height: 200px;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
